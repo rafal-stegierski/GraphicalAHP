@@ -1,0 +1,27 @@
+version: '3'
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "80:80"
+    volumes:
+      - ./frontend:/app
+    #command: npm run serve
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_HOST=rethinkdb
+      - DATABASE_PORT=28015
+    depends_on:
+      - rethinkdb
+  rethinkdb:
+    image: rethinkdb:latest
+    ports:
+      - "8080:8080"
+      - "28015:28015"
+    volumes:
+      - rethinkdb_data:/data
+volumes:
+  rethinkdb_data:

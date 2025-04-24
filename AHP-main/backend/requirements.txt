@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pandas
+numpy
+python-multipart
+rethinkdb==2.4.10
+looseversion
+bcrypt
+xlsxwriter

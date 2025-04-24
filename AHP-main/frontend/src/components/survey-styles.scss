@@ -1,0 +1,104 @@
+// survey-styles.scss
+
+$primary-color: #007BFF;
+$primary-color-hover: #0056b3;
+$light-background: #e0f7ff;
+$button-background: #307ab2;
+$text-color: #ffffff;
+$error-background: #ffdddd;
+$error-border: #ff0000;
+
+.survey-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: $light-background;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.survey-component {
+  width: 70%;
+  min-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: $light-background;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.survey-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: $primary-color;
+}
+
+.survey-input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  margin: auto;
+}
+
+.survey-input,
+.survey-textarea {
+  flex: 1;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid $primary-color;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  margin-right: 10px;
+}
+
+.survey-input:last-child,
+.survey-textarea:last-child {
+  margin-right: 0;
+}
+
+.survey-input:focus,
+.survey-textarea:focus {
+  border-color: $primary-color-hover;
+  outline: none;
+}
+
+.survey-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  color: $text-color;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &.save-button {
+    background-color: $button-background;
+    width: 40%;
+  }
+
+  &.add-button,
+  &.remove-button {
+    flex-shrink: 0;
+    margin-left: 10px;
+  }
+
+  &.add-button {
+    background-color: #28a745;
+  }
+
+  &.remove-button {
+    background-color: #dc3545;
+  }
+}
+
+.survey-button:hover {
+  background-color: $primary-color-hover;
+}
+
+.survey-error-container {
+  background-color: $error-background;
+  border: 1px solid $error-border;
+  padding: 10px;
+  margin-top: 10px;
+}
