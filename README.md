@@ -1,4 +1,4 @@
-# GraphicalAHP
+# Graphical Fuzzy AHP
 
 ## Survey Platform with Multi-Modal Response Support
 
