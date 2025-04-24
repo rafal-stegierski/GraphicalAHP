@@ -40,7 +40,22 @@ Then from folder `/AHP-main` run command:
     ```bash
     docker compose up --build
     ```
+## Admin access
 
+Initial administrator username is **admin** and password **secret**.
+To alter password use RethinkDB Data Explorer (exposed on 8080 port of server) and bcrypt to create password hash (could be https://bcrypt-generator.com/). Then run query:
+
+    ```js
+    r.db('test').table('users').filter({username: 'admin'}).update({password: 'bcrypted_password'})
+    ```
+
+## Add user
+
+To add new user to platform provide its name and bcrypted password query:
+
+    ```js
+    r.db('test').table('users').insert({username: 'new_username', password: 'bcrypted_password'})
+    ```
 
 ## Optional HTTPS Support
 
