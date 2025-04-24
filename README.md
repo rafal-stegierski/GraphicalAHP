@@ -22,8 +22,24 @@ These metrics are essential for **pairwise comparison-based decision-making fram
 
 ## Configuration
 
-Open file from repository `/AHP-main/frontend/src/axiosConfig.js` and set `axios.defaults.baseURL` to public address of FastAPI server, protocol (http or https) and port (default port is 8000).
+The application requires Docker to be installed.
+If Docker is not already installed on your system, you can install it by running the following commands (in case of Debian/Ubuntu based systems):
 
+    ```bash
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+    sudo apt update
+    sudo apt-cache policy docker-ce
+    sudo apt install docker-ce
+    ```
+
+After cloning newest version of repository open file from repository `/AHP-main/frontend/src/axiosConfig.js` and set `axios.defaults.baseURL` to public address of FastAPI server, protocol (http or https) and port (default port is 8000).
+
+Then from folder `/AHP-main` run command:
+
+    ```bash
+    docker compose up --build
+    ```
 
 
 ## Optional HTTPS Support
