@@ -108,4 +108,7 @@ For Debian based systems you could use for delegated domain use Nginx with Certb
    ```bash
    sudo certbot --nginx
    ```
+
+---
+
 [![DOI](https://zenodo.org/badge/971938080.svg)](https://doi.org/10.5281/zenodo.15274783)

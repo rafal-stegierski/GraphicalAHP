@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Graphical Fuzzy AHP"
+version: 1.0.2
+doi: 10.5281/zenodo.15275240
+date-released: 2025-01-01
+repository-code: https://github.com/rafal-stegierski/GraphicalFuzzyAHP
+authors:
+  - family-names: Stegierski
+    given-names: Rafał
+    orcid: https://orcid.org/0000-0001-7225-3275
+  - family-names: Karczmarek
+    given-names: Paweł
+    orcid: https://orcid.org/0000-0002-6215-297X
+  - family-names: Rachwał
+    given-names: Albert
+    orcid: https://orcid.org/0000-0002-1093-4275
+  - family-names: Miazek
+    given-names: Patrycja
+    orcid: https://orcid.org/0009-0009-5980-8227
+license: MIT
+keywords:
+  - AHP
+  - fuzzy logic
+  - pairwise comparisons
+  - decision support systems
+  - survey platform
+abstract: >
+  GraphicalFuzzyAHP is a software platform for designing and managing surveys
+  with support for both textual and graphical response modes. It facilitates decision-making
+  using pairwise comparisons, incorporating fuzzy logic. The tool includes built-in functionality
+  for computing preference vectors and consistency ratios, and is designed for easy deployment
+  on both local machines and public servers.
