@@ -174,7 +174,7 @@ async def calculate_survey_results_from_list(survey_id: str, method: str):
 
 
 @app.post("/api/save-survey")
-async def save_survey(survey_data: Request):
+async def save_survey(survey_data: dict):
     try:
         conn = get_rethinkdb_conn()
         survey_id = str(uuid4())
